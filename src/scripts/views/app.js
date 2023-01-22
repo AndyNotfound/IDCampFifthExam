@@ -26,10 +26,17 @@ class App {
     await page.afterRender();
 
     const skipLinkElem = document.querySelector('.skip-to-content');
-    skipLinkElem.addEventListener('keypress', (event) => {
-      event.preventDefault();
-      document.querySelector('main').focus();
-    });
+    if (skipLinkElem) {
+      skipLinkElem.addEventListener('keydown', (event) => {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          const mainElem = document.querySelector('main');
+          if (mainElem) {
+            mainElem.focus();
+          }
+        }
+      });
+    }
   }
 }
 
