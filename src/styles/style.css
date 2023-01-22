@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Public+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2b2d42;
+  border-radius: 0;
+}
+
+a.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: #2b2d42;
+  color: white;
+  padding: 1em 2em;
+  z-index: 100;
+  color: #f4fffd;
+  font-family: "Poppins", sans-serif;
+}
+
+a.skip-to-content:focus {
+  top: 0px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+nav {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+nav .navWrapper {
+  padding: 2em 1em;
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: 0;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@media screen and (min-width: 1200px) {
+  nav .navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+  }
+}
+
+nav .navWrapper .navList {
+  padding: 2em;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999;
+  top: 50px;
+  left: -100%;
+  list-style: none;
+  color: #2b2d42;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+@media screen and (min-width: 1200px) {
+  nav .navWrapper .navList {
+    width: unset;
+    height: unset;
+    position: unset;
+    top: unset;
+    left: unset;
+    background-color: unset;
+    display: flex;
+    justify-content: 0;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+nav .navWrapper .navList.open {
+  left: 0;
+}
+
+nav .navWrapper .navList li > a {
+  padding: 0.7em;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav .navWrapper .navList li > a:focus {
+  border-radius: 3px;
+  outline: 1px solid #2b2d42;
+}
+
+nav .navWrapper .hamburger {
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  width: fit-content;
+  height: fit-content;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 10px;
+}
+
+nav .navWrapper .hamburger > svg {
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (min-width: 1200px) {
+  nav .navWrapper .hamburger {
+    display: none;
+  }
+}
+
+main section#hero {
+  position: relative;
+  color: #f4fffd;
+}
+
+main section#hero img {
+  width: 100%;
+  height: 500px;
+  image-rendering: optimizeSpeed;
+  object-position: center;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  main section#hero img {
+    height: 600px;
+  }
+}
+
+main section#hero .hero-content {
+  width: 100%;
+  padding: 1em;
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: 0;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@media screen and (min-width: 1200px) {
+  main section#hero .hero-content {
+    padding: 1em 1em 1em 5rem;
+    display: flex;
+    justify-content: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
+
+main section#hero .hero-content header {
+  color: #f4fffd;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Public Sans", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  main section#hero .hero-content header {
+    font-size: 2.5rem;
+  }
+}
+
+main section#hero .hero-content button {
+  font-family: "Poppins", sans-serif;
+  background-color: #2b2d42;
+  color: #f4fffd;
+  width: fit-content;
+  padding: 1em 3em;
+  outline: unset;
+  border: unset;
+  border-radius: 5px;
+}
+
+main section#hero .hero-content button:focus {
+  border-radius: 3px;
+  outline: 1px solid #f4fffd;
+}
+
+main section#article,
+main section#recommendation {
+  width: 95%;
+  margin: 4em auto;
+}
+
+@media screen and (min-width: 1200px) {
+  main section#article,
+  main section#recommendation {
+    width: calc(100% - 10rem);
+  }
+}
+
+main section#article h2,
+main section#recommendation h2 {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "Public Sans", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  main section#article h2,
+  main section#recommendation h2 {
+    font-size: 1.6rem;
+  }
+}
+
+main section#article .article-container,
+main section#recommendation .article-container {
+  margin-top: 4em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3em;
+  row-gap: 2em;
+}
+
+@media screen and (min-width: 760px) {
+  main section#article .article-container,
+  main section#recommendation .article-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main section#article .article-container,
+  main section#recommendation .article-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+main section#article .article-container restaurant-item,
+main section#recommendation .article-container restaurant-item {
+  position: relative;
+  width: 100%;
+}
+
+main section#article .article-container restaurant-item img,
+main section#recommendation .article-container restaurant-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+main section#article .article-container restaurant-item .city,
+main section#recommendation .article-container restaurant-item .city {
+  position: absolute;
+  top: calc(100% - calc(230px * 2));
+  background-color: #2b2d42;
+  padding: 1em 2em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #f4fffd;
+  font-family: "Poppins", sans-serif;
+}
+
+main section#article .article-container restaurant-item .city > p,
+main section#recommendation .article-container restaurant-item .city > p {
+  color: #f4fffd;
+}
+
+main section#article .article-container restaurant-item .detail,
+main section#recommendation .article-container restaurant-item .detail {
+  border-right: 1px solid #2b2d42;
+  border-left: 1px solid #2b2d42;
+  border-bottom: 1px solid #2b2d42;
+  padding: 1.2em 1.2em 2em 1.2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+main section#article .article-container restaurant-item .detail > p.rating,
+main
+  section#recommendation
+  .article-container
+  restaurant-item
+  .detail
+  > p.rating {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+main section#article .article-container restaurant-item .detail > a.tittle,
+main
+  section#recommendation
+  .article-container
+  restaurant-item
+  .detail
+  > a.tittle {
+  padding: 0.8em 0.8em 0.8em 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Public Sans", sans-serif;
+}
+
+main
+  section#article
+  .article-container
+  restaurant-item
+  .detail
+  > a.tittle:focus,
+main
+  section#article
+  .article-container
+  restaurant-item
+  .detail
+  > a.tittle:hover,
+main
+  section#recommendation
+  .article-container
+  restaurant-item
+  .detail
+  > a.tittle:focus,
+main
+  section#recommendation
+  .article-container
+  restaurant-item
+  .detail
+  > a.tittle:hover {
+  background-color: #2b2d42;
+  color: #f4fffd;
+  border: none;
+}
+
+main section#article .article-container restaurant-item .detail > p.desc,
+main
+  section#recommendation
+  .article-container
+  restaurant-item
+  .detail
+  > p.desc {
+  max-width: 66ch;
+  max-height: 200px;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+footer {
+  background-color: #2b2d42;
+  color: #f4fffd;
+  text-align: center;
+  padding: 2em 0em;
+  font-family: "Public Sans", sans-serif;
+}
+
+/* DETAILS PAGE */
+
+main div.container {
+  padding: 2em 1em;
+}
+
+section#restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@media screen and (min-width: 1200px) {
+  section#restaurant {
+    flex-direction: row;
+    gap: 3em;
+  }
+}
+
+section#restaurant div.restaurant-image {
+  width: 100%;
+  position: relative;
+}
+
+section#restaurant div.restaurant-image img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  section#restaurant div.restaurant-image img {
+    min-width: 800px;
+    min-height: 500px;
+    max-width: 1000px;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+section#restaurant div.restaurant-image p {
+  position: absolute;
+  top: 20px;
+  background-color: #2b2d42;
+  color: #f4fffd;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  padding: 1em 3em;
+}
+
+section#restaurant div.restaurant-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+section#restaurant div.restaurant-details h1.restaurant-name {
+  color: #2b2d42;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+  section#restaurant div.restaurant-details h1.restaurant-name {
+    font-size: 2rem;
+  }
+}
+
+section#restaurant div.restaurant-details p {
+  font-weight: 300;
+  color: #2b2d42;
+}
+
+div.menu {
+  width: 100%;
+  gap: 5em;
+  display: flex;
+}
+
+h2.details-header {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+ul.menu-item {
+  margin: 0.5em 0 0 0;
+}
+
+ul.menu-item li {
+  font-weight: 200;
+  margin-left: 20px;
+}
+
+section#consumer-review {
+  margin: 2em 0;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  section#consumer-review h2.details-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2em;
+  }
+}
+section#consumer-review div#review-list {
+  width: 100%;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media screen and (min-width: 760px) {
+  section#consumer-review div#review-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section#consumer-review div#review-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+section#consumer-review div#review-list article.review-item {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border: 1px solid #2b2d42;
+  border-radius: 5px;
+}
+
+p.review {
+  font-style: italic;
+  font-weight: 300;
+}
+
+span.quote,
+span.quote-rv {
+  font-size: 3rem;
+  margin-right: 10px;
+  font-family: sans-serif;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1200px) {
+  span.quote {
+    font-size: 2rem;
+  }
+}
+
+span.quote-rv {
+  font-size: 2rem;
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
